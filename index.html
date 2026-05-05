@@ -743,7 +743,7 @@ function startWave() {
 function resetPlayer() {
   // Remove old player from tanks
   tanks = tanks.filter(t => !t.isPlayer);
-  player = new Tank(12, 24, DIR.UP, true);
+  player = new Tank(8, 24, DIR.UP, true);
   tanks.push(player);
 }
 
