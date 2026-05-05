@@ -812,7 +812,7 @@ function gameLoop() {
     lives--;
     updateUI();
     if (lives > 0) {
-      // Respawn player
+      // Respawn player after delay
       setTimeout(() => {
         if (gameRunning && !gameOver) {
           resetPlayer();
@@ -823,6 +823,7 @@ function gameLoop() {
       endGame(false);
       return;
     }
+    player = null; // Prevent re-triggering death in subsequent frames
   }
 
   // Check base destruction
